@@ -1,0 +1,29 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.dreaminginprod'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework:spring-context:6.1.10'
+	implementation 'org.springframework:spring-aop:6.1.10'
+	implementation 'org.springframework:spring-beans:6.1.10'
+	implementation 'org.springframework:spring-core:6.1.10'
+	implementation 'org.springframework:spring-jcl:6.1.10'
+	implementation 'org.springframework:spring-expression:6.1.10'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

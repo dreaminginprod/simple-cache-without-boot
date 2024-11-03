@@ -14,8 +14,6 @@ class ApplicationConfiguration {
 
     @Bean
     CacheManager cacheManager() {
-        return new ConcurrentMapCacheManager(
-                "books"
-        );
+        return new ConcurrentMapCacheManager("books");
     }
 }
